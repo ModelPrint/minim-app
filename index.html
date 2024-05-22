@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINIM App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #config-section, #open-section {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="url"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #icon-container img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100px;
+            max-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>MINIM App</h1>
+    <div id="nav">
+        <button onclick="showConfig()">MINIM Konfig</button>
+        <button onclick="showOpen()">MINIM Open</button>
+    </div>
+
+    <div id="config-section">
+        <h2>MINIM Konfig</h2>
+        <form id="config-form">
+            <label for="url">URL eingeben:</label>
+            <input type="url" id="url" name="url" required>
+            <label for="icon">Icon hochladen:</label>
+            <input type="file" id="icon" name="icon" accept="image/*" required>
+            <button type="submit">Speichern</button>
+        </form>
+    </div>
+
+    <div id="open-section">
+        <h2>MINIM Open</h2>
+        <div id="icon-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
